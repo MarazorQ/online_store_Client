@@ -6,7 +6,11 @@ export default class deviceStore{
         this._types = [
             {id: 1, name: 'Холодосы'},
             {id: 2, name: 'Ноуты'},
-            {id: 3, name: 'Телефоны'}
+            {id: 3, name: 'Телефоны'},
+            {id: 4, name: 'Наушники'},
+            {id: 5, name: 'Планшеты'},
+            {id: 6, name: 'Аксесуары'},
+            {id: 7, name: 'Часы'}
         ]
         this._brands = [
             {id: 1, name: 'apple'},
