@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {observer} from 'mobx-react-lite'
+import { observer } from "mobx-react-lite"
 import { Context } from '../index'
 import ListGroup from "react-bootstrap/ListGroup"
 
@@ -9,7 +9,12 @@ const TypeBar = observer(() =>{
     return(
         <ListGroup>
             {device.types.map(type =>
-                <ListGroup.Item key={type.id}>
+                <ListGroup.Item 
+                    key={type.id} 
+                    active={type.id === device.setSelectedType.id}
+                    onClick={() => device.setSelectedType(type)}
+                   
+                >
                     {type.name}
                 </ListGroup.Item>
             )}

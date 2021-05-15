@@ -22,6 +22,7 @@ export default class deviceStore{
             {id: 2, name: 'apple2', price: 50200, rating: 3, img: ''},
             {id: 3, name: 'apple3', price: 50300, rating: 2, img: ''}
         ]
+        this._selectedType = {}
         makeAutoObservable(this)// теперь mobx следит за изменениями этих переменных и при изменении будет перерендер
     }
 
@@ -35,6 +36,9 @@ export default class deviceStore{
     setDevices(bool){
         this._devices = bool
     }
+    setSelectedType(type){
+        this._selectedType = type
+    }
     //geter(чтобы получать переменные из нашего состояния), так называемые компьютед функции, они вызываются только в том случае, если переменная внутри была изменена(своего рода оптимизация)
     get types(){
         return this._types
@@ -44,6 +48,9 @@ export default class deviceStore{
     }
     get devices(){
         return this._devices
+    }
+    get selectedType(){
+        return this._selectedType
     }
 }
 

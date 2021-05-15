@@ -1,9 +1,9 @@
-import { makeAutoObservable } from "mobx"
+import { makeAutoObservable} from "mobx"
 
 export default class userStore{
     //вызывается при создании объекта данного класса 
     constructor(){
-        this._isAuth = false
+        this._isAuth = true
         this._user = {}
         makeAutoObservable(this)// теперь mobx следит за изменениями этих переменных и при изменении будет перерендер
     }
